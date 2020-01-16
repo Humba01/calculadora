@@ -1,0 +1,15 @@
+{
+    "name": "humba/calculadora",
+    "description": "Calculadora em PHP.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Humba01",
+            "email": "humbandroid@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "8"
+    }
+}
