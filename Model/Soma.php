@@ -11,7 +11,6 @@ class Soma
     public function fazSoma()
     {
         echo 'Quantos valores deseja somar?' . PHP_EOL;
-
         $qtdDeVezes = intval(fgets(STDIN));
 
         $resultado = 0.0;

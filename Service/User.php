@@ -2,7 +2,7 @@
 
 namespace Modelo\Service;
 
-use Modelo\Model\{Soma, Subtracao};
+use Modelo\Model\{Soma, Subtracao, Multiplicacao};
 
 class User
 {
@@ -12,8 +12,8 @@ class User
 
         echo '1 => Soma' . PHP_EOL;
         echo '2 => Subtracao' . PHP_EOL;
-        /*echo '3 => Multiplicacao' . PHP_EOL;
-        echo '4 => Divisao' . PHP_EOL;
+        echo '3 => Multiplicacao' . PHP_EOL;
+        /*echo '4 => Divisao' . PHP_EOL;
         echo '5 => Potencia' . PHP_EOL;
         echo '6 => Raiz Quadrada' . PHP_EOL;*/
     }
@@ -30,6 +30,10 @@ class User
             case 2:
                 $subtracao = new Subtracao();
                 $subtracao->fazSubtracao();
+                break;
+            case 3:
+                $multiplicacao = new Multiplicacao();
+                $multiplicacao->fazMultiplicacao();
                 break;
             default:
                 echo 'Opção não existente no momento!';
