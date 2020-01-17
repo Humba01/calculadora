@@ -17,7 +17,7 @@ class Soma
         $resultado = 0.0;
 
         for ($i = 1; $i <= $qtdDeVezes; $i++) {
-            echo 'Insira o valor' . PHP_EOL;
+            echo 'Insira o valor para somar' . PHP_EOL;
 
             $valor = floatval(fgets(STDIN));
 
