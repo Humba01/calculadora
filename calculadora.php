@@ -4,6 +4,7 @@ require_once 'E:\Programas-Próprios\Calculadora\src\Modelo\Model\Soma.php';
 require_once 'E:\Programas-Próprios\Calculadora\src\Modelo\Model\Subtracao.php';
 require_once 'E:\Programas-Próprios\Calculadora\src\Modelo\Model\Multiplicacao.php';
 require_once 'E:\Programas-Próprios\Calculadora\src\Modelo\Model\Divisao.php';
+require_once 'E:\Programas-Próprios\Calculadora\src\Modelo\Model\Potencia.php';
 
 use Modelo\Service\User;
 
