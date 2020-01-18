@@ -2,7 +2,14 @@
 
 namespace Modelo\Service;
 
-use Modelo\Model\{Divisao, Soma, Subtracao, Multiplicacao, Potencia};
+use Modelo\Model\{
+    Divisao,
+    Soma,
+    Subtracao,
+    Multiplicacao,
+    Potencia,
+    RaizQuadrada
+};
 
 class User
 {
@@ -15,7 +22,7 @@ class User
         echo '3 => Multiplicacao' . PHP_EOL;
         echo '4 => Divisao' . PHP_EOL;
         echo '5 => Potencia' . PHP_EOL;
-        /*echo '6 => Raiz Quadrada' . PHP_EOL;*/
+        echo '6 => Raiz Quadrada' . PHP_EOL;
     }
 
     public function ui1()
@@ -42,6 +49,10 @@ class User
             case 5:
                 $potencia = new Potencia();
                 $potencia->fazPotencia();
+                break;
+            case 6:
+                $raizQuadrada = new RaizQuadrada();
+                $raizQuadrada->fazRaizQuadrada();
                 break;
             default:
                 echo 'Opção não existente no momento!';
