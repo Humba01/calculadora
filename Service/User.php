@@ -45,6 +45,7 @@ class User
     {
         echo 'Seja bem vindo(a) à Calculadora!' . PHP_EOL . PHP_EOL;
 
+        echo '00 => Sair da Calculadora' . PHP_EOL;
         echo '01 => Soma' . PHP_EOL;
         echo '02 => Subtracao' . PHP_EOL;
         echo '03 => Multiplicacao' . PHP_EOL;
@@ -86,6 +87,9 @@ class User
         $resposta = fgets(STDIN);
 
         switch ($resposta) {
+            case 0:
+                echo str_repeat(PHP_EOL, 2) . 'Até o proximo uso :-D' . PHP_EOL;
+                break;
             case 1:
                 $soma = new Soma();
                 $soma->fazSoma();
@@ -149,6 +153,7 @@ class User
             case 16:
                 $tangenteHiper = new TangenteHiper();
                 $tangenteHiper->fazTangenteHiper();
+                break;
             case 17:
                 $secanteHiper = new SecanteHiper();
                 $secanteHiper->fazSecanteHiper();
@@ -208,6 +213,7 @@ class User
             case 31:
                 $arcoCotangenteHiper = new ArcoCotangenteHiper();
                 $arcoCotangenteHiper->fazArcoCotangenteHiper();
+                break;
             case 32:
                 $logBaseDez = new LogBaseDez();
                 $logBaseDez->fazLogBaseDez();
@@ -221,8 +227,16 @@ class User
                 $logNatural->fazLogNatural();
                 break;
             default:
-                echo 'Opção não existente no momento!';
-                break;
+                echo 'Opção não existente no momento!' . PHP_EOL;
+                echo 'Para sair selecione a opção 0!' . PHP_EOL;
+                echo 'Se deseja continuar selecione uma das demais!' . str_repeat(PHP_EOL, 2);
+                self::ui2();
         }
+    }
+
+    public function ui2()
+    {
+        self::ui0();
+        self::ui1();
     }
 }
