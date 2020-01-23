@@ -15,6 +15,16 @@ use Modelo\Model\{
     ArcoSenoHiper,
     ArcoTangente,
     ArcoTangenteHiper,
+    ConvBaseBinDec,
+    ConvBaseDecBin,
+    ConvBaseDecHex,
+    ConvBaseDecOct,
+    ConvBaseHexBin,
+    ConvBaseHexDec,
+    ConvBaseOctDec,
+    ConvBaseQualquer,
+    ConvGrausRad,
+    ConvRadGraus,
     Cossecante,
     CossecanteHiper,
     Divisao,
@@ -32,11 +42,12 @@ use Modelo\Model\{
     SenoHiper,
     CossenoHiper,
     CotangenteHiper,
+    DemonsValorPi,
     LogBaseDez,
     LogBaseQualquer,
     LogNatural,
     SecanteHiper,
-    TangenteHiper
+    TangenteHiper,
 };
 
 class User
@@ -80,14 +91,17 @@ class User
         echo '32 => Logaritmo de Base Dez' . PHP_EOL;
         echo '33 => Logaritmo de Base Qualquer' . PHP_EOL;
         echo '34 => Logaritmo Natural' . PHP_EOL;
-        /*echo '35 => Conversor de Base Decimal em Binaria' . PHP_EOL;
+        echo '35 => Conversor de Base Decimal em Binaria' . PHP_EOL;
         echo '36 => Corversor de Base Decimal em Octadecimal' . PHP_EOL;
         echo '37 => Conversor de Base Decimal em Hexadecimal' . PHP_EOL;
         echo '38 => Conversor de Base Binaria em Decimal' . PHP_EOL;
-        echo '39 => Conversor de Base Hexadecimal em Decimal' . PHP_EOL;
-        echo '40 => Conversor de Base Octadecimal em Decimal' . PHP_EOL;
-        echo '41 => Corversor de Base Qualquer' . PHP_EOL;
-        echo '42 => Conversor de Angulos em Graus para Radianos' . PHP_EOL;*/
+        echo '39 => Conversor de Base Hexadecimal em Binaria' . PHP_EOL;
+        echo '40 => Conversor de Base Hexadecimal em Decimal' . PHP_EOL;
+        echo '41 => Conversor de Base Octadecimal em Decimal' . PHP_EOL;
+        echo '42 => Corversor de Base Qualquer' . PHP_EOL;
+        echo '43 => Conversor de Angulos em Graus para Radianos' . PHP_EOL;
+        echo '44 => Conversor de Angulos em Radianos para Graus' . PHP_EOL;
+        echo '45 => Demonstrador do valor de PI' . PHP_EOL;
     }
 
     public function ui1()
@@ -234,14 +248,50 @@ class User
                 $logNatural = new LogNatural();
                 $logNatural->fazLogNatural();
                 break;
-                /*case 35:
+            case 35:
+                $baseDecBin = new ConvBaseDecBin();
+                $baseDecBin->fazConvBaseDecBin();
+                break;
             case 36:
+                $baseDecOct = new ConvBaseDecOct();
+                $baseDecOct->fazConvBaseDecOct();
+                break;
             case 37:
+                $baseDecHex = new ConvBaseDecHex();
+                $baseDecHex->fazConvBaseDecHex();
+                break;
             case 38:
+                $baseBinDec = new ConvBaseBinDec();
+                $baseBinDec->fazConvBaseBinDec();
+                break;
             case 39:
+                $baseHexBin = new ConvBaseHexBin();
+                $baseHexBin->fazConvBaseHexBin();
+                break;
             case 40:
+                $baseHexDec = new ConvBaseHexDec();
+                $baseHexDec->fazConvBaseHexDec();
+                break;
             case 41:
-            case 42:*/
+                $baseOctDec = new ConvBaseOctDec();
+                $baseOctDec->fazConvBaseOctDec();
+                break;
+            case 42:
+                $baseQualquer = new ConvBaseQualquer();
+                $baseQualquer->fazConvBaseQualquer();
+                break;
+            case 43:
+                $convDegRad = new ConvGrausRad();
+                $convDegRad->fazConvGrausRad();
+                break;
+            case 44:
+                $convRadDeg = new ConvRadGraus();
+                $convRadDeg->fazConvRadGraus();
+                break;
+            case 45:
+                $valorPi = new DemonsValorPi();
+                $valorPi->fazDemonsValorPi();
+                break;
             default:
                 echo 'Opção não existente no momento!' . PHP_EOL;
                 echo 'Para sair selecione a opção 0!' . PHP_EOL;
